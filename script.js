@@ -18,6 +18,12 @@ function botonEncriptar() {
 	const imagen = document.querySelector(".mensaje-imagen-no-encontrado");
 	imagen.style.display = "none";
 
+	//Alineo el contenido otra vez
+	const containerS2=document.querySelector(".s2-container");
+	containerS2.style.justifyContent="space-between";
+
+	
+
 	//Aparece el div contnedor del boton copiar
 	const botonCopiar = document.querySelector(".copiar-contenedor");
 	botonCopiar.style.visibility = "visible"; //Para pantallas grandes, mantiene la caja en su lugar pero invisible
@@ -42,6 +48,10 @@ function botonDesencriptar() {
 	//Quito la pantalla que contiene la imagen y los textos
 	const imagen = document.querySelector(".mensaje-imagen-no-encontrado");
 	imagen.style.display = "none";
+
+	//Alineo el contenido otra vez
+	const containerS2=document.querySelector(".s2-container");
+	containerS2.style.justifyContent="space-between";
 
 	//Aparece el div contnedor del boton copiar
 	const botonCopiar = document.querySelector(".copiar-contenedor");

@@ -133,7 +133,10 @@ button {
 	overflow-x: hidden;
 	padding-bottom: 5px;
 	line-height: 150%;
-	word-break: break-all;
+}
+
+.texto-transformado{
+	word-break:break-word;
 }
 
 .mensaje-imagen-no-encontrado {
@@ -217,7 +220,6 @@ footer {
 
 	.s2-container {
 		width: 100%;
-		word-wrap: break-word;
 	}
 
 	.s2-container img {

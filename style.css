@@ -39,7 +39,6 @@ button {
 	width: 328px;
 	border-radius: 24px;
 	border: 1px solid var(--Dark-blue-300);
-	background: white;
 	padding: 24px;
 	cursor: pointer;
 	font-size: 16px;
@@ -115,16 +114,15 @@ button {
 
 .boton-encriptar:hover {
 	background: var(--Dark-blue-400);
-	color: var(--Light-blue-200);
 }
 
 .boton-desencriptar {
-	border: solid var(--Dark-blue-300);
+	background-color: var(--Light-blue-200);
 	color: var(--Dark-blue-300);
 }
 
 .boton-desencriptar:hover {
-	background-color: var(--Light-blue-200);
+	background-color: var(--Light-blue-300);
 }
 
 /*Sección-2*/
@@ -196,6 +194,15 @@ button {
 	margin-top: 32px;
 	visibility: hidden;
 	display: none;
+}
+
+.boton-copiar {
+	background-color: rgba(255, 255, 255, 0);
+	color: var(--Dark-blue-300);
+}
+
+.boton-copiar:hover {
+	background-color: var(--Light-blue-100);
 }
 
 /*FOOTER*/

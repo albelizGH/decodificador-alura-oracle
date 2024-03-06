@@ -6,8 +6,8 @@ Características:
 
 Encripta texto ingresado por el usuario utilizando un conjunto específico de reglas.
 
-  -Debe funcionar solo con letras minúsculas
-  -No deben ser utilizados letras con acentos ni caracteres especiales
-  -No se permite el uso de números
+-Debe funcionar solo con letras minúsculas
+-No deben ser utilizados letras con acentos ni caracteres especiales
+-No se permite el uso de números
 
 Desencripta texto previamente encriptado según las mismas reglas.

@@ -1,8 +1,28 @@
+:root {
+	--Dark-blue-100: #609ed4;
+	--Dark-blue-200: #356ea9;
+	--Dark-blue-300: #0a3871;
+	--Dark-blue-400: #072b61;
+	--Dark-blue-500: #052051;
+
+	--Light-blue-100: #f3f5fc;
+	--Light-blue-200: #eff1fa;
+	--Light-blue-300: #e9ecf8;
+	--Light-blue-400: #aab2d5;
+	--Light-blue-500: #757fb2;
+
+	--Gray-100: #ced4da;
+	--Gray-200: #adb5bd;
+	--Gray-300: #868e96;
+	--Gray-400: #495057;
+	--Gray-500: #343a40;
+}
+
 /*GENERAL*/
 
 body {
 	margin: 40px 40px;
-	background-color: #f3f5fc;
+	background-color: var(--Light-blue-100);
 	font-family: "Inter", sans-serif;
 }
 
@@ -18,8 +38,8 @@ button {
 	box-sizing: border-box;
 	width: 328px;
 	border-radius: 24px;
-	border: 1px solid var(--Dark-blue-dark-blue-300, #0a3871);
-	background: rgb(256, 256, 256, 0);
+	border: 1px solid var(--Dark-blue-300);
+	background: white;
 	padding: 24px;
 	cursor: pointer;
 	font-size: 16px;
@@ -34,7 +54,7 @@ button {
 
 /*MAIN*/
 
-/*Seccion-1*/
+/*Sección-1*/
 
 .section1 {
 	width: 60%;
@@ -60,15 +80,15 @@ button {
 	height: 100%;
 	outline: none;
 	border: none;
-	background-color: #f3f5fc;
-	color: #0a3871;
+	background-color: var(--Light-blue-100);
+	color: var(--Dark-blue-300);
 	line-height: 150%; /* 48px */
 	font-size: 32px;
 	resize: none;
 	margin-top: 128px;
 }
 .text-area::placeholder {
-	color: #0a3871;
+	color: var(--Dark-blue-300);
 }
 
 .texto-alerta {
@@ -76,7 +96,7 @@ button {
 	flex-direction: row;
 	align-items: center;
 	font-size: 12px;
-	color: #495057;
+	color: var(--Gray-300);
 	padding-bottom: 16px;
 }
 
@@ -88,21 +108,26 @@ button {
 }
 
 .boton-encriptar {
-	border: 1px #0a3871;
+	border: 1px var(--Dark-blue-300);
 	background: #0a3871;
 	color: white;
 }
 
 .boton-encriptar:hover {
-	background: #0b468f;
-	color: white;
+	background: var(--Dark-blue-400);
+	color: var(--Light-blue-200);
+}
+
+.boton-desencriptar {
+	border: solid var(--Dark-blue-300);
+	color: var(--Dark-blue-300);
 }
 
 .boton-desencriptar:hover {
-	background-color: #e4e9f980;
+	background-color: var(--Light-blue-200);
 }
 
-/*Seccion-2*/
+/*Sección-2*/
 
 .section2 {
 	width: 40%;
@@ -127,7 +152,7 @@ button {
 	display: flex;
 	width: 100%;
 	max-height: 100%;
-	color: #495057;
+	color: var(--Gray-400);
 	font-size: 24px;
 	overflow-y: auto;
 	overflow-x: hidden;
@@ -135,8 +160,8 @@ button {
 	line-height: 150%;
 }
 
-.texto-transformado{
-	word-break:break-word;
+.texto-transformado {
+	word-break: break-all;
 }
 
 .mensaje-imagen-no-encontrado {
@@ -147,7 +172,7 @@ button {
 }
 
 .mensaje-no-encontrado {
-	color: #343a40;
+	color: var(--Gray-500);
 	text-align: center;
 	font-size: 24px;
 	font-style: normal;
@@ -158,7 +183,7 @@ button {
 
 .instrucciones {
 	margin-top: 16px;
-	color: #495057;
+	color: var(--Dark-blue-400);
 	padding: 0 32px;
 	text-align: center;
 }
@@ -230,13 +255,12 @@ footer {
 		display: none;
 	}
 
-	.boton-copiar{
+	.boton-copiar {
 		width: 100%;
 	}
-
 }
 
-@media (max-width: 700px){
+@media (max-width: 700px) {
 	button {
 		width: 100%;
 	}

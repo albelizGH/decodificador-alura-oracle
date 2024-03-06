@@ -14,17 +14,17 @@ function botonEncriptar() {
 		return;
 	}
 
+	console.log("")
+
 	//Quito la pantalla que contiene la imagen y los textos
 	const imagen = document.querySelector(".mensaje-imagen-no-encontrado");
 	imagen.style.display = "none";
 
 	//Alineo el contenido otra vez
-	const containerS2=document.querySelector(".s2-container");
-	containerS2.style.justifyContent="space-between";
+	const containerS2 = document.querySelector(".s2-container");
+	containerS2.style.justifyContent = "space-between";
 
-	
-
-	//Aparece el div contnedor del boton copiar
+	//Aparece el div contenedor del botón copiar
 	const botonCopiar = document.querySelector(".copiar-contenedor");
 	botonCopiar.style.visibility = "visible"; //Para pantallas grandes, mantiene la caja en su lugar pero invisible
 	botonCopiar.style.display = "flex"; //Para pantallas mas pequeñas, hace aparecer la caja con el boton de copiar que estaba desaparecido
@@ -50,10 +50,10 @@ function botonDesencriptar() {
 	imagen.style.display = "none";
 
 	//Alineo el contenido otra vez
-	const containerS2=document.querySelector(".s2-container");
-	containerS2.style.justifyContent="space-between";
+	const containerS2 = document.querySelector(".s2-container");
+	containerS2.style.justifyContent = "space-between";
 
-	//Aparece el div contnedor del boton copiar
+	//Aparece el div contenedor del boton copiar
 	const botonCopiar = document.querySelector(".copiar-contenedor");
 	botonCopiar.style.visibility = "visible"; //Para pantallas grandes, mantiene la caja en su lugar pero invisible
 	botonCopiar.style.display = "flex"; //Para pantallas mas pequeñas, hace aparecer la caja con el boton de copiar que estaba desaparecido
@@ -69,10 +69,10 @@ function botonDesencriptar() {
 function encriptar(inputTexto) {
 	inputTexto = inputTexto.toLowerCase();
 
-	//Verifico si contiene caracter especial o numeros
-	if(contieneCaracterEspecial(inputTexto)){
-		alert("No se aceptan caracteres especiales ni acentos")
-		return
+	//Verifico si contiene carácter especial o números
+	if (contieneCaracterEspecial(inputTexto)) {
+		alert("No se aceptan caracteres especiales ni acentos");
+		return;
 	}
 
 	for (let i = 0; i < matrizCodigo.length; i++) {
@@ -89,10 +89,10 @@ function encriptar(inputTexto) {
 function desencriptar(inputTexto) {
 	inputTexto = inputTexto.toLowerCase();
 
-	//Verifico si contiene caracter especial o numeros
-	if(contieneCaracterEspecial(inputTexto)){
-		alert("No se aceptan caracteres especiales ni acentos")
-		return
+	//Verifico si contiene carácter especial o números
+	if (contieneCaracterEspecial(inputTexto)) {
+		alert("No se aceptan caracteres especiales ni acentos");
+		return;
 	}
 
 	for (let i = 0; i < matrizCodigo.length; i++) {
@@ -121,3 +121,8 @@ function contieneCaracterEspecial(texto) {
 	const caracteresAdmitidos = /[^a-zA-ZñÑ\s]/;
 	return caracteresAdmitidos.test(texto);
 }
+
+
+
+
+

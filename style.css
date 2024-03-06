@@ -99,6 +99,10 @@ button {
 	padding-bottom: 16px;
 }
 
+.texto-alerta p{
+	margin-left: 4px;
+}
+
 .botones-container {
 	display: flex;
 	flex-direction: row;

@@ -1,9 +1,8 @@
-Encriptador y Desencriptador de Texto Alura-Oracle-Challenge 1
+<h1>Encriptador y Desencriptador de Texto Alura-Oracle-Challenge 1</h1>
 
 Este es un proyecto que implementa un encriptador y desencriptador de texto simple utilizando JavaScript. Permite al usuario ingresar texto y luego encriptarlo o desencriptarlo según sea necesario.
 
-Características:
-
+<h2>Características:</h2>
 Encripta texto ingresado por el usuario utilizando un conjunto específico de reglas.
 
 -Debe funcionar solo con letras minúsculas

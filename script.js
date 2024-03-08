@@ -14,7 +14,11 @@ function botonEncriptar() {
 		return;
 	}
 
-	console.log("")
+	//Verifico si contiene carácter especial o números
+	if (contieneCaracterEspecial(textArea.value)) {
+		alert("No se aceptan mayusculas, caracteres especiales ni acentos");
+		return;
+	}
 
 	//Quito la pantalla que contiene la imagen y los textos
 	const imagen = document.querySelector(".mensaje-imagen-no-encontrado");
@@ -45,6 +49,12 @@ function botonDesencriptar() {
 		return;
 	}
 
+	//Verifico si contiene carácter especial o números
+	if (contieneCaracterEspecial(textArea.value)) {
+		alert("No se aceptan mayusculas, caracteres especiales ni acentos");
+		return;
+	}
+
 	//Quito la pantalla que contiene la imagen y los textos
 	const imagen = document.querySelector(".mensaje-imagen-no-encontrado");
 	imagen.style.display = "none";
@@ -67,30 +77,22 @@ function botonDesencriptar() {
 }
 
 function encriptar(inputTexto) {
-	//Verifico si contiene carácter especial o números
-	if (contieneCaracterEspecial(inputTexto)) {
-		alert("No se aceptan mayusculas, caracteres especiales ni acentos");
-		return;
-	}
+	let textoResultado = "";
 
-	for (let i = 0; i < matrizCodigo.length; i++) {
-		if (inputTexto.includes(matrizCodigo[i][0])) {
-			inputTexto = inputTexto.replaceAll(
-				matrizCodigo[i][0],
-				matrizCodigo[i][1]
-			);
+	for (let i = 0; i < inputTextoArray.length; i++) {
+		for (let j = 0; j < matrizCodigo.length; j++) {
+			if (inputTexto[i] == matrizCodigo[j][0]) {
+				textoResultado += matrizCodigo[j][1];
+				break;
+			} else {
+				textoResultado += inputTextoArray[i];
+			}
 		}
 	}
-	return inputTexto;
+	return textoResultado;
 }
 
 function desencriptar(inputTexto) {
-	//Verifico si contiene carácter especial o números
-	if (contieneCaracterEspecial(inputTexto)) {
-		alert("No se aceptan mayusculas, caracteres especiales ni acentos");
-		return;
-	}
-
 	for (let i = 0; i < matrizCodigo.length; i++) {
 		if (inputTexto.includes(matrizCodigo[i][1])) {
 			inputTexto = inputTexto.replaceAll(
@@ -117,7 +119,3 @@ function contieneCaracterEspecial(texto) {
 	const caracteresAdmitidos = /[^a-zñ\s]/;
 	return caracteresAdmitidos.test(texto);
 }
-
-
-
-

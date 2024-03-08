@@ -67,11 +67,9 @@ function botonDesencriptar() {
 }
 
 function encriptar(inputTexto) {
-	inputTexto = inputTexto.toLowerCase();
-
 	//Verifico si contiene carácter especial o números
 	if (contieneCaracterEspecial(inputTexto)) {
-		alert("No se aceptan caracteres especiales ni acentos");
+		alert("No se aceptan mayusculas, caracteres especiales ni acentos");
 		return;
 	}
 
@@ -87,11 +85,9 @@ function encriptar(inputTexto) {
 }
 
 function desencriptar(inputTexto) {
-	inputTexto = inputTexto.toLowerCase();
-
 	//Verifico si contiene carácter especial o números
 	if (contieneCaracterEspecial(inputTexto)) {
-		alert("No se aceptan caracteres especiales ni acentos");
+		alert("No se aceptan mayusculas, caracteres especiales ni acentos");
 		return;
 	}
 
@@ -118,10 +114,9 @@ function copiar() {
 
 function contieneCaracterEspecial(texto) {
 	//Validamos que solo se coloquen letras sin caracteres especiales, no se aceptan números
-	const caracteresAdmitidos = /[^a-zA-ZñÑ\s]/;
+	const caracteresAdmitidos = /[^a-zñ\s]/;
 	return caracteresAdmitidos.test(texto);
 }
-
 
 
 

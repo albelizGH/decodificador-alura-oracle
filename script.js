@@ -77,19 +77,15 @@ function botonDesencriptar() {
 }
 
 function encriptar(inputTexto) {
-	let textoResultado = "";
-
-	for (let i = 0; i < inputTextoArray.length; i++) {
-		for (let j = 0; j < matrizCodigo.length; j++) {
-			if (inputTexto[i] == matrizCodigo[j][0]) {
-				textoResultado += matrizCodigo[j][1];
-				break;
-			} else {
-				textoResultado += inputTextoArray[i];
-			}
+	for (let i = 0; i < matrizCodigo.length; i++) {
+		if (inputTexto.includes(matrizCodigo[i][0])) {
+			inputTexto = inputTexto.replaceAll(
+				matrizCodigo[i][0],
+				matrizCodigo[i][1]
+			)
 		}
 	}
-	return textoResultado;
+	return inputTexto;
 }
 
 function desencriptar(inputTexto) {
